@@ -28,3 +28,10 @@ module "s3" {
 module "dynamodb" {
     source ="../modules/dynamodb_table"
 }
+
+module "endpoint" {
+  source ="../modules/vpc_endpoints"
+  vpc_id = module.network.vpc_id
+  route_table_id = module.network.route_table_id
+  region = var.region
+}

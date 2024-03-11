@@ -33,3 +33,7 @@ variable "private_subnet" {
 }
 
 
+variable "region" {
+    description= "to define the region "
+    type= string 
+}
